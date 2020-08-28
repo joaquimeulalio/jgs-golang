@@ -1,0 +1,93 @@
+{
+      "members": [
+        {
+          "uuid": "f2954d56-5c3f-0559-e39e-4e8ba4eb6812",
+          "name": "cluster_001",
+          "type": "hpe_cp",
+          "version": "5.1 abc",
+          "registrationDate": "Tue, 14 Apr 2020 19:57:01 UTC",
+          "status": "critical",
+          "state": "activated",
+          "nodes": [
+            {
+              "uri": "/api/v1/devices/3d902bdd-5ea0-40f1-87af-ba1de8663cf5",
+              "status": "ok",
+              "state": "registered",
+              "registrationDate": "Tue, 14 Apr 2020 19:57:01 UTC",
+              "role": "controller"
+            },
+            {
+              "uri": "/api/v1/devices/325a2f60-d854-47ae-b760-b08341816aeb",
+              "status": "critical",
+              "state": "registered",
+              "registrationDate": "Tue, 14 Apr 2020 19:57:01 UTC",
+              "role": "worker"
+            },
+            {
+              "uri": "/api/v1/devices/d1406ac6-46d7-4f82-81f0-f6748de01db3",
+              "status": "unknown",
+              "state": "registering",
+              "registrationDate": "Tue, 14 Apr 2020 19:57:01 UTC",
+              "role": "worker"
+            }
+          ]
+        },
+        {
+          "uuid": "g2954d56-5c3f-0559-e39e-4e8ba4eb6813",
+          "name": "cluster_002",
+          "type": "hpe_cp",
+          "version": "5.1",
+          "registrationDate": "2020-04-06T13:06:45Z",
+          "status": "critical",
+          "state": "activated",
+          "nodes": [
+            {
+              "uri": "/api/v1/devices/3d902bdd-5ea0-40f1-87af-ba1de8663cf5",
+              "status": "ok",
+              "state": "registered",
+              "registrationDate": "2020-04-06T13:06:45Z",
+              "role": "controller"
+            },
+            {
+              "uri": "/api/v1/devices/325a2f60-d854-47ae-b760-b08341816aeb",
+              "status": "critical",
+              "state": "registered",
+              "registrationDate": "2020-04-06T13:06:45Z",
+              "role": "worker"
+            }
+          ]
+        },
+        {
+          "uuid": "g2954d56-5c3f-0559-e39e-4e8ba4eb6814",
+          "name": "cluster_003",
+          "type": "hpe_cp",
+          "version": "5.1",
+          "registrationDate": "2020-04-06T13:06:45Z",
+          "status": "unknown",
+          "state": "activating",
+          "nodes": [
+            {
+              "uri": "/api/v1/devices/3d902bdd-5ea0-40f1-87af-ba1de8663cf5",
+              "status": "unknown",
+              "state": "registering",
+              "registrationDate": "2020-04-06T13:06:45Z",
+              "role": "controller"
+            },
+            {
+              "uri": "/api/v1/devices/325a2f60-d854-47ae-b760-b08341816aeb",
+              "status": "ok",
+              "state": "registered",
+              "registrationDate": "2020-04-06T13:06:45Z",
+              "role": "worker"
+            },
+            {
+              "uri": "/api/v1/devices/325a2f60-d854-47ae-b760-b08341816aeb",
+              "status": "ok",
+              "state": "registered",
+              "registrationDate": "2020-04-06T13:06:45Z-999",
+              "role": "worker-999"
+            }
+          ]
+        }
+      ]
+}
