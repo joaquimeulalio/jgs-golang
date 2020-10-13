@@ -27,6 +27,7 @@ main()
 	b1.print();
 	Derived1 d1;
 	d1.print();
+	
 	printf("============= Polimorphism: \n");
 	Base* p;
 	p = &b1;
