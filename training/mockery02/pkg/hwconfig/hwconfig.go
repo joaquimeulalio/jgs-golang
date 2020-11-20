@@ -10,8 +10,8 @@ type DatabaseTable1 struct {
 	Count int
 }
 
-// GetCount GetCount
-func (dt *DatabaseTable1) GetCount(delta int) int {
+// GetDatabaseCount GetDatabaseCount
+func (dt *DatabaseTable1) GetDatabaseCount(delta int) int {
 	return 1000 + dt.Count + delta
 }
 
@@ -21,21 +21,35 @@ type DatabaseTable2 struct {
 	Count int
 }
 
-// GetCount GetCount
-func (dt DatabaseTable2) GetCount(delta int) int {
+// GetDatabaseCount GetDatabaseCount
+func (dt DatabaseTable2) GetDatabaseCount(delta int) int {
 	return 2000 + dt.Count + delta
 }
 
 // Service interface
 type Service interface {
-	GetCount(delta int) int
+	GetDatabaseCount(delta int) int
 }
 
-// RunHwconfig RunHwconfig
+// RunHwconfig RunHwconfig Method 1: Service interface as parameter
 func RunHwconfig(i Service) int {
-	fmt.Println("RunHwconfig()")
+	fmt.Println("RunHwconfig() Method 1: Service interface as parameter")
 
-	n := i.GetCount(4)
+	n := i.GetDatabaseCount(111)
+	fmt.Printf("n=%d\n", n)
+	return n
+}
+
+// VerifierServer VerifierServer
+type VerifierServer struct {
+	HwconfigService Service
+}
+
+// RunHwconfig RunHwconfig Method 2: Struct receiver containing service interface inside it
+func (vf *VerifierServer) RunHwconfig() int {
+	fmt.Println("RunHwconfig() Method 2: Struct receiver containing service interface inside it")
+
+	n := vf.HwconfigService.GetDatabaseCount(222)
 	fmt.Printf("n=%d\n", n)
 	return n
 }

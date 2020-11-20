@@ -9,8 +9,8 @@ type Service struct {
 	mock.Mock
 }
 
-// GetCount provides a mock function with given fields: delta
-func (_m *Service) GetCount(delta int) int {
+// GetDatabaseCount provides a mock function with given fields: delta
+func (_m *Service) GetDatabaseCount(delta int) int {
 	ret := _m.Called(delta)
 
 	var r0 int
